@@ -8,7 +8,22 @@ export default {
       return Math.floor(state.rollsRemaining / state.rollRate);
     }
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    incrementRollsRemaining(state) {
+      state.rollsRemaining += 1;
+    },
+    decrementRollsRemaining(state) {
+      state.rollsRemaining =
+        state.rollsRemaining > 0 ? state.rollsRemaining - 1 : 0;
+    }
+  },
+  actions: {
+    incrementRollsRemaining({ commit }) {
+      commit("incrementRollsRemaining");
+    },
+    decrementRollsRemaining({ commit }) {
+      commit("decrementRollsRemaining");
+    }
+  },
   modules: {}
 };

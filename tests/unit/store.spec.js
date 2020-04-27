@@ -8,6 +8,39 @@ describe("Store", () => {
     const localVue = createLocalVue();
     localVue.use(Vuex);
   });
+  describe("Actions", () => {
+    describe("decrementRollsRemaining", () => {
+      it("should decrement the rollsRemaining by 1", () => {
+        const store = new Vuex.Store(cloneDeep(storeConfig));
+        store.replaceState({
+          rollsRemaining: 10
+        });
+        expect(store.state.rollsRemaining).toBe(10);
+        store.dispatch("decrementRollsRemaining");
+        expect(store.state.rollsRemaining).toBe(9);
+      });
+      it("should not decrement the rollsRemaining beyond 0", () => {
+        const store = new Vuex.Store(cloneDeep(storeConfig));
+        store.replaceState({
+          rollsRemaining: 0
+        });
+        expect(store.state.rollsRemaining).toBe(0);
+        store.dispatch("decrementRollsRemaining");
+        expect(store.state.rollsRemaining).toBe(0);
+      });
+    });
+    describe("incrementRollsRemaining", () => {
+      it("should increment the rollsRemaining by 1", () => {
+        const store = new Vuex.Store(cloneDeep(storeConfig));
+        store.replaceState({
+          rollsRemaining: 10
+        });
+        expect(store.state.rollsRemaining).toBe(10);
+        store.dispatch("incrementRollsRemaining");
+        expect(store.state.rollsRemaining).toBe(11);
+      });
+    });
+  });
   describe("Getters", () => {
     describe("daysRemaining", () => {
       const parameters = [

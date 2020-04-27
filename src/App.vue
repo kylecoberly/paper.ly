@@ -9,6 +9,20 @@
         {{ rollsRemaining }} rolls remain
       </p>
       <p class="roll-rate" data-test-roll-rate>{{ rollRate }} rolls per day</p>
+      <div class="roll-commands">
+        <button
+          data-test-increment-rolls-remaining-button
+          @click="incrementRollsRemaining"
+        >
+          +
+        </button>
+        <button
+          data-test-decrement-rolls-remaining-button
+          @click="decrementRollsRemaining"
+        >
+          -
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -25,6 +39,14 @@ export default {
     },
     rollRate() {
       return this.$store.state.rollRate;
+    }
+  },
+  methods: {
+    incrementRollsRemaining() {
+      this.$store.dispatch("incrementRollsRemaining");
+    },
+    decrementRollsRemaining() {
+      this.$store.dispatch("decrementRollsRemaining");
     }
   }
 };
