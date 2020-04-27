@@ -22,7 +22,27 @@
             "name": "I am on the main page",
             "result": {
               "status": "passed",
-              "duration": 68000000
+              "duration": 97000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I have 10 rolls remaining",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I have a roll rate of 2",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
             }
           },
           {
@@ -51,11 +71,84 @@
               }
             ],
             "keyword": "Then ",
-            "line": 5,
+            "line": 7,
             "name": "I should see these stats:",
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 40000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "display-stats;heavy-usage",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Heavy usage",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I am on the main page",
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I have 10 rolls remaining",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I have a roll rate of 5",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "days remaining",
+                      "2"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "rolls remaining",
+                      "10"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "roll rate",
+                      "5"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see these stats:",
+            "result": {
+              "status": "passed",
+              "duration": 43000000
             }
           }
         ]

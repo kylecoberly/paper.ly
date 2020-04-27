@@ -3,17 +3,30 @@
     <div class="content-wrapper">
       <h1 data-test-logo>paper.ly</h1>
       <p class="days-remaining" data-test-days-remaining>
-        <span>5</span> days remaining
+        <span>{{ daysRemaining }}</span> days remaining
       </p>
-      <p class="rolls-remaining" data-test-rolls-remaining>10 rolls remain</p>
-      <p class="roll-rate" data-test-roll-rate>2 rolls per day</p>
+      <p class="rolls-remaining" data-test-rolls-remaining>
+        {{ rollsRemaining }} rolls remain
+      </p>
+      <p class="roll-rate" data-test-roll-rate>{{ rollRate }} rolls per day</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  computed: {
+    daysRemaining() {
+      return this.$store.getters.daysRemaining;
+    },
+    rollsRemaining() {
+      return this.$store.state.rollsRemaining;
+    },
+    rollRate() {
+      return this.$store.state.rollRate;
+    }
+  }
 };
 </script>
 

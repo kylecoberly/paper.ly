@@ -1,9 +1,16 @@
 const { Given, Then } = require("cypress-cucumber-preprocessor/steps");
-const { visit, the } = cy;
+const { visit, the, getStore } = cy;
 
 Given("I am on the main page", () => {
   visit("/");
   the("logo").contains("paper.ly");
+});
+
+Given("I have {int} rolls remaining", rollsRemaining => {
+  getStore().setState("rollsRemaining", rollsRemaining);
+});
+Given("I have a roll rate of {int}", rollRate => {
+  getStore().setState("rollRate", rollRate);
 });
 
 Then("I should see these stats:", rawDataTable => {
