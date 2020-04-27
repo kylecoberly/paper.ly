@@ -1,0 +1,65 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Display stats",
+    "line": 1,
+    "id": "display-stats",
+    "tags": [],
+    "uri": "DisplayStats.feature",
+    "elements": [
+      {
+        "id": "display-stats;standard-usage",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Standard usage",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the main page",
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "days remaining",
+                      "5"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "rolls remaining",
+                      "10"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "roll rate",
+                      "2"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should see these stats:",
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
