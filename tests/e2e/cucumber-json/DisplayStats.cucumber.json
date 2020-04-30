@@ -22,7 +22,7 @@
             "name": "I am on the main page",
             "result": {
               "status": "passed",
-              "duration": 464000000
+              "duration": 497000000
             }
           },
           {
@@ -32,7 +32,7 @@
             "name": "I have 10 rolls remaining",
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 6000000
             }
           },
           {
@@ -75,7 +75,7 @@
             "name": "I should see these stats:",
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 42000000
             }
           }
         ]
@@ -95,7 +95,7 @@
             "name": "I am on the main page",
             "result": {
               "status": "passed",
-              "duration": 102000000
+              "duration": 74000000
             }
           },
           {
@@ -105,7 +105,7 @@
             "name": "I have 10 rolls remaining",
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 7000000
             }
           },
           {
@@ -115,7 +115,7 @@
             "name": "I have a roll rate of 5",
             "result": {
               "status": "passed",
-              "duration": 9000000
+              "duration": 6000000
             }
           },
           {
@@ -148,7 +148,7 @@
             "name": "I should see these stats:",
             "result": {
               "status": "passed",
-              "duration": 65000000
+              "duration": 45000000
             }
           }
         ]

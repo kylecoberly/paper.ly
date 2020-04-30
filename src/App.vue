@@ -28,26 +28,16 @@
 </template>
 
 <script>
+import { mapState, mapActions, mapGetters } from "vuex";
+
 export default {
   name: "App",
   computed: {
-    daysRemaining() {
-      return this.$store.getters.daysRemaining;
-    },
-    rollsRemaining() {
-      return this.$store.state.rollsRemaining;
-    },
-    rollRate() {
-      return this.$store.state.rollRate;
-    }
+    ...mapState(["rollsRemaining", "rollRate"]),
+    ...mapGetters(["daysRemaining"])
   },
   methods: {
-    incrementRollsRemaining() {
-      this.$store.dispatch("incrementRollsRemaining");
-    },
-    decrementRollsRemaining() {
-      this.$store.dispatch("decrementRollsRemaining");
-    }
+    ...mapActions(["incrementRollsRemaining", "decrementRollsRemaining"])
   }
 };
 </script>
