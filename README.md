@@ -1,4 +1,4 @@
-# draft-5
+# Paper.ly
 
 ## Project setup
 ```
